@@ -1,0 +1,26 @@
+{
+  "name": "zone-answer-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "本地运行的 DNS 区域编辑与权威查询预览工具",
+  "scripts": {
+    "dev": "ZAS_MODE=dev tsx watch server/main.ts",
+    "start": "tsx server/main.ts",
+    "build": "tsc -p tsconfig.client.json --noEmit && tsc -p tsconfig.json --noEmit && vite build",
+    "typecheck": "tsc -p tsconfig.client.json --noEmit && tsc -p tsconfig.json --noEmit",
+    "test:semantics": "tsx server/smoke.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.3"
+  }
+}
